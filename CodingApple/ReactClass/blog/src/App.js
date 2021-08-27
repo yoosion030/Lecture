@@ -8,21 +8,11 @@ import './App.css';
     let [like,likeRevise] = useState(0);
     let [modal,modalRevise] = useState(false);
     let onOff = false;
-    let a;
     
     function changeTitle(){
       var newTitle = [...title];
       newTitle[0] = '와 신난다'
       titleRevise( newTitle );
-    }
-    function modalSwitch(){
-      if(onOff === false){
-        onOff = true;
-      } else {
-        onOff = false;
-      }
-      console.log(onOff)
-      modalRevise(onOff);
     }
 
     return (
@@ -53,9 +43,10 @@ import './App.css';
           <hr />
         </div>
 
-        <button onClick = {modalSwitch}>버튼</button>
+        <button onClick = {()=>{modalRevise(!modal)}}>버튼</button>
+
         {
-          onOff === true 
+          modal === true 
           ? <Modal></Modal>
           : null
         }
