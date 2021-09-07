@@ -14,10 +14,32 @@
 <body>
     
     <h4 id="test" class="test1">안녕하세요</h4>
-    
+    <p class="greeting">안녕하세요</p>
+    <p class="greeting">안녕하세요</p>
+    <p class="greeting">안녕하세요</p>
+
+    <button class="btn">버튼</button>
+    <button class="btn">버튼</button>
+    <button class="btn">버튼</button>
     
     <script>
-        // $('#test').addClass('yellow-bg');
+
+        // document.getElementsByClassName('greeting')[0].innerHTML = '안녕하던가';
+        // document.getElementsByClassName('greeting')[1].innerHTML = '안녕하세유';
+        // document.getElementsByClassName('greeting')[2].innerHTML = '안녕하세여';
+
+
+        // $('.greeting').eq(0).html('안녕하셈');
+
+        // $('.btn').on('click',()=>{
+        //     alert('제이쿼리 싫어');
+        // });
+
+
+        $('.btn').on('click',()=>{
+            $('.greeting').hide();
+        });
+
     </script>
 </body>
 </html>
